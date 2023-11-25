@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/addtask">Add Task</a>
+        <a href="/edittask">Edit Task</a>
+        <a href="/deletetask">Delete task</a>
+    </div>
+    
+    <div>
+        <form action="/{{page_submit}}" method="post">
+                    {{#if id_form}}
+                    <input type="text" name="id" id="id" />
+                    {{/if}}
+                    {{#if item_form}}
+                    <input type="text" name="item" id="item" />
+                    {{/if}}
+                    <button type="submit">{{action}}</button>
+        </form>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/addtask">Add Task</a>
+        <a href="/edittask">Edit Task</a>
+        <a href="/deletetask">Delete task</a>
+    </div>
+    
+    <div>
+    <table id="default-table">
+            <tr><th>ID</th><th>TASK</th></tr>
+
+        {{#each m}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.item}}</td>
+            </tr>
+        {{/each}}
+    </table>
+    </div>
+    
+
+</body>
+</html>
